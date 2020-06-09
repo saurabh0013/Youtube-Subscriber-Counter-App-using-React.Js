@@ -11,7 +11,7 @@ function NavigationMenu(props){
          
            
           
-        <ul className="text-red-500 text-xl p-3" >
+        <ul className="text-red-500 text-l p-3" >
         
          <li className=" border-b border-t py-3">
          <Link to = '/' onClick = {props.closeMenu}> 
@@ -20,16 +20,18 @@ function NavigationMenu(props){
          </li>
         
          <li className=" border-b border-t py-3">
+         <Link to = '/featured' onClick = { props.closeMenu}>
+         Featured
+         </Link>
+         </li>
+
+         
+         <li className=" border-b border-t py-3">
          <Link to = '/about' onClick = { props.closeMenu}>
          About 
          </Link>
          </li>
         
-         <li className=" border-b border-t py-3">
-         <Link to = '/featured' onClick = { props.closeMenu}>
-         Featured
-         </Link>
-         </li>
         
          </ul>
 
