@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './View/Home';
-import Result from './View/Result';
+
 import About from './View/About';
 import Featured from './View/Featured'
 import{
@@ -31,9 +31,7 @@ function App() {
               <Route path="/about">
                 <About />
               </Route>
-              <Route path="/result">
-              <Result />
-            </Route>
+            
 
 
           </Switch>
