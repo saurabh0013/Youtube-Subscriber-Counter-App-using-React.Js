@@ -63,22 +63,22 @@ async function getsubs(){
             <div className="float-left mr-5 my-10 ml-5">
                 <img src={bhuwan} className=" rounded-full h-16 w-16" alt="Bhuwan"  />
                 <p className="font-bold ">Bhuwan Bam</p>
-                <p>Subscriber : <span id="bhuwan"></span></p>
+                <p>Subscriber :<br/> <span id="bhuwan"></span></p>
             </div>
             <div className="float-left mr-5 ml-5 my-10">
                 <img src={carry} className="rounded-full h-16 w-16" alt="carry"  />
                 <p className="font-bold"> Carrymynati</p>
-                <p>Subscriber : <span id="carry"></span></p>
+                <p>Subscriber :<br/> <span id="carry"></span></p>
             </div>
             <div className="float-left mr-5 ml-5 my-10">
                 <img src={amit} className="rounded-full h-16 w-16" alt="amit"  />
                 <p className="font-bold">Amit <br/>Bhadana</p>
-                <p>Subscriber : <span id="amit"></span></p>
+                <p>Subscriber :<br/> <span id="amit"></span></p>
             </div>
             <div className="float-left mr-5 ml-5 my-10">
                 <img src={ashish} className="rounded-full h-16 w-16" alt="Ashish"  />
                 <p className="font-bold">Ashish <br/> Chanchalani </p>
-                <p>Subscriber : <span id="ashish"></span></p>
+                <p>Subscriber :<br/> <span id="ashish"></span></p>
             </div>
         
 
