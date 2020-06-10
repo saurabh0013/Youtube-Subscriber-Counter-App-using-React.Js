@@ -10,7 +10,7 @@ function Featured(){
 async function getsubs(){
     const baseUrl = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='
     const apiKey='&key=AIzaSyC-qZToT6ZsYLnlQ0hp404e8tF3jD7jYTI' 
-
+    
   // Carrymynati
 
     const channelIdCarry = 'UCj22tfcQrWG7EMEKS0qLeEg'
@@ -48,9 +48,9 @@ async function getsubs(){
     const subscriberCountAshish = dataAshish.items[0].statistics.subscriberCount
     console.log(subscriberCountAshish);
     document.getElementById('ashish').innerText= subscriberCountAshish;
-
-
-
+    
+    
+    
 }
      getsubs();
    
@@ -60,6 +60,7 @@ async function getsubs(){
  
     <div className= " p-3">
         <h1 className= "text-2xl font-bold border-t border-b p-3 text-gray-600">FEATURED CONTENT</h1>
+        <div class="lds-roller"></div>
             <div className="float-left mr-5 my-10 ml-5">
                 <img src={bhuwan} className=" rounded-full h-16 w-16" alt="Bhuwan"  />
                 <p className="font-bold ">Bhuwan Bam</p>

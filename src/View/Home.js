@@ -28,10 +28,13 @@ function Home(){
         <h1 className= "text-2xl font-bold border-t border-b p-3 text-gray-600 "> HOME</h1>
        
         <center>
-             <p> <input type="text" id="userInput" placeholder=" Enter Channel Name/Id"  className=" outline-none focus:bg-blue-100 px-2 py-2 m-10"></input></p>
+             <p> <input type="text" id="userInput" placeholder=" Enter Channel Id"  className=" outline-none focus:bg-blue-100 px-2 py-2 m-10"></input></p>
              <p><button onClick = {getsubs} id="searchBtn" className="outline-none focus:bg-gray-400  px-2 bg-red-500 text-white rounded px-4 py-2">Show Subscribers</button></p>
                     <br/>
              <h2><span id="subs" className= "text-xl font-bold border-t border-b p-3"></span></h2>
+             <footer className="py-3 absolute bottom-0 my-10">
+                    <p>This is a testing version. We currently do not support search by Channel Name  but it will be  available soon.</p>
+             </footer>
         </center>
     </div>
     )
