@@ -2,7 +2,7 @@ import React from 'react'
 import me from './assets/me.jpg'
 function View(){
     return(
-    <div className= " p-3">
+    <div >
         <h1 className= "text-2xl font-bold border-t border-b p-3 text-gray-600">ABOUT</h1>
         <p className =" px-3 text-gray-600">
             <br/> 
@@ -15,13 +15,12 @@ function View(){
             Developer : Saurbah Pratap Singh
             </p>
             <p  className="px-3 text-green-500"> <a href="https://github.com/saurabh0013">See my projects @ GitHub</a> </p> 
-            <p className="px-3 text-red-400"><a href="mailto:saurabh.sps.13@gmail.com"> mail me : saurabh.sps.13@gmail.com</a>
-
-            <footer className="text-black py-3 absolute bottom-0 my-10">
-                <h4>Go to options menu at top right corner in Chrome browser and Click on Add to home screen to get a full screen interface experience</h4>    
-            </footer>
+            <p className="px-3 text-red-400"><a href="mailto:saurabh.sps.13@gmail.com"> mail me : saurabh.sps.13@gmail.com</a></p>
+              
+            <p className="bg-black w-full text-blue-600 py-3 px-3 absolute bottom-0 my-10">Go to options menu at top right corner in Chrome browser and Click on Add to home screen to get a full screen interface experience</p>    
+           
             
-        </p>
+        
         
    </div>
    )
