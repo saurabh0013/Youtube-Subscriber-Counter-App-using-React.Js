@@ -4,36 +4,64 @@ import React from 'react'
 
 function Home(){
 
-    async function getsubs(){
+  async function getsubs(){
 
         
-    const baseUrl = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='
+    const baseUrl1 = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='
+    const baseUrl2 = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='
     const apiKey='&key=AIzaSyC-qZToT6ZsYLnlQ0hp404e8tF3jD7jYTI' 
     
-    var channelId = document.getElementById('userInput').value
+    
+    var searchText = document.getElementById('userInput').value
 
-    if(channelId === ""){
-        alert("Opps! You forgot to enter channel Id")
+    if(searchText === ""){
+        alert("Opps! You forgot to enter channel Name")
         return
     }
+       try { 
+            const response = await fetch(baseUrl1+searchText+apiKey)
+            const data = await response.json()
+            
+            
+            const channelId = data.items[0].snippet.channelId
+            console.log(channelId);
+            
+            document.getElementById('title').innerText= `${data.items[0].snippet.title}`
+            document.getElementById('img').src= data.items[0].snippet.thumbnails.default.url
+           
+     
+       
+            const responseSubs = await fetch(baseUrl2+channelId+apiKey)
+            const dataSubs = await responseSubs.json()
+            document.getElementById('subs').innerText= `Subscribers : ${dataSubs.items[0].statistics.subscriberCount} `
+            document.getElementById('userInput').value = ""
+     
+       }
 
-
-        const response = await fetch(baseUrl+channelId+apiKey)
-        const data = await response.json()
-        document.getElementById('subs').innerText= `Subscribers : ${data.items[0].statistics.subscriberCount} ` 
-        document.getElementById('userInput').value = ""    
+       catch(err){
+           alert('Opps!! Somethig went wrong. No results found. Refresh the page and try again.')
+       }
+        
+        
+       
+           
     }
     return(
     <div >
         <h1 className= "text-2xl font-bold border-t border-b p-3 text-gray-600 "> HOME</h1>
        
         <center>
-             <p> <input type="text" id="userInput" placeholder=" Enter Channel Id"  className=" outline-none bg-gray-200 focus:bg-blue-100 px-2 py-2 m-10"></input></p>
-             <p><button onClick = {getsubs} id="searchBtn" className="outline-none focus:bg-gray-400  px-2 bg-red-500 text-white rounded px-4 py-2">Show Subscribers</button></p>
+             <p> <input type="text" id="userInput" placeholder=" Enter Channel Name"  className=" outline-none bg-gray-200 focus:bg-blue-100 px-2 py-2 m-10"></input></p>
+             <p><button onClick = {getsubs} id="searchBtn" className="outline-none  px-2 bg-red-500 text-white rounded px-4 py-2">Show Subscribers</button></p>
                     <br/>
-             <h2><span id="subs" className= "text-xl font-bold border-t border-b p-3"></span></h2>
+             <div id="result" className= "text-xl font-bold p-3">
+                    <h2><span id="title"></span></h2>
+                     <img id="img" className="rounded-full" />
+             
+                    <h2><span id="subs" ></span></h2>
+            </div>
             
-             <p className="bg-black w-full text-blue-600 py-3 px-3 absolute bottom-0 my-10">This is a testing version. We currently do not support search by Channel Name  but it will be  available soon.</p>
+            
              
         </center>
     </div>

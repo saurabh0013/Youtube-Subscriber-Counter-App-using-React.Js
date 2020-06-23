@@ -14,8 +14,8 @@ function View(){
             <img src={me} alt="img saurabh" className=" rounded-full h-40 w-40"/>
             Developer : Saurbah Pratap Singh
             </p>
-            <p  className="px-3 text-green-500"> <a href="https://github.com/saurabh0013">See my projects @ GitHub</a> </p> 
-            <p className="px-3 text-red-400"><a href="mailto:saurabh.sps.13@gmail.com"> mail me : saurabh.sps.13@gmail.com</a></p>
+            <p  className="px-3 text-green-500"> See the code of this app and my projects<a href="https://github.com/saurabh0013"> @ GitHub</a> </p> 
+            <p className="px-3 text-red-400"> mail me :<a href="mailto:saurabh.sps.13@gmail.com"> saurabh.sps.13@gmail.com</a></p>
               
             <p className="bg-black w-full text-blue-600 py-3 px-3 absolute bottom-0 my-10">Go to options menu at top right corner in Chrome browser and Click on Add to home screen to get a full screen interface experience</p>    
            
