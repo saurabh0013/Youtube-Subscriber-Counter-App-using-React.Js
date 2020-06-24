@@ -54,7 +54,7 @@ function Home(){
              <p> <input type="text" id="userInput" placeholder=" Enter Channel Name"  className=" outline-none bg-gray-200 focus:bg-blue-100 px-2 py-2 m-10"></input></p>
              <p><button onClick = {getsubs} id="searchBtn" className="outline-none  px-2 bg-red-500 text-white rounded px-4 py-2">Show Subscribers</button></p>
                     <br/>
-             <div id="result" className= "text-xl font-bold p-3">
+             <div id="result" className= "text-xl font-bold p-3 ">
                     <h2><span id="title"></span></h2>
                      <img id="img" className="rounded-full" />
              

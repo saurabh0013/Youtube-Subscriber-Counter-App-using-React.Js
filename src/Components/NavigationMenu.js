@@ -2,6 +2,8 @@ import React from 'react'
 import{Link } from 'react-router-dom'
 
 
+
+
 function NavigationMenu(props){
     return(
         <div>
@@ -12,30 +14,34 @@ function NavigationMenu(props){
            
           
         <ul className="text-red-500 text-l p-3" >
-        
+        <Link to = '/' onClick = {props.closeMenu}> 
          <li className=" border-b border-t py-3">
-         <Link to = '/' onClick = {props.closeMenu}> 
+       
          Home
-         </Link>
-         </li>
         
-         <li className=" border-b border-t py-3">
+         </li>
+         </Link>
+        
          <Link to = '/featured' onClick = { props.closeMenu}>
-         Featured
-         </Link>
-         </li>
-
-         
          <li className=" border-b border-t py-3">
-         <Link to = '/about' onClick = { props.closeMenu}>
-         About 
-         </Link>
+         
+         Featured
          </li>
+         </Link>
+       
+
+         <Link to = '/about' onClick = { props.closeMenu}>
+         <li className=" border-b border-t py-3 focus:bg-red-400">
+        
+         About 
+         </li>
+         </Link>
+         
         
         
          </ul>
 
-
+      
         </div>
 
     
